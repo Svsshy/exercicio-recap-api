@@ -10,6 +10,7 @@ Elon Musk comprou o Twitter e todos estão tristes. Você percebe que é uma boa
 - Inicialize um projeto de Node.js utilizando o ```npm```.
 - Crie uma instância do MongoDB usando o [Mongo Atlas](https://www.mongodb.com/atlas/database).
 - Crie uma API usando o ```express``` que possua **rotas**, **controladores** e **modelos**. 
+- Utilize o pacote ```mongoose``` para criar ```Schemas``` dos recursos.
 - A sua API deve ser capaz de realizar operações de CRUD nos seguintes recursos:
 
 ```javascript
