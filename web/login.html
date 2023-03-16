@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="email" id="email" placeholder="email"><br>
+    <input type="password" name="password" id="password" placeholder="password"><br>
+    <button onclick="login()">entrar</button>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let login = () => {
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            axios.post("http://localhost:3030/auth/login", { 
+            email,
+            password
+         }).then((res) => {
+            localStorage.setItem("authToken", res.data.payload)
+            alert("LOGADO COM SUCESSO!")
+            window.location = "/web/index.html"
+         }, error => {
+            alert("deu ruim!")
+         })
+        }
+        
+    </script>
+
+</html>
